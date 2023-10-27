@@ -10,7 +10,7 @@
 
     "delete:docs": "del /Q docs",
     "copy:dist": "copyfiles dist/country-app/* ./docs -f",
-    "build:href": "ng build --base-href ./",
+    "build:href": "ng build --base-href=https://christiantc.github.io/ng-country-app",
     "build:github": "npm run delete:docs && npm run build:href && npm run copy:dist"
   },
   "private": true,
