@@ -18,6 +18,10 @@ export class ByRegionPageComponent {
 
   constructor(private countriesService:CountriesService) {}
 
+  ngOnInit(): void {
+    this.countries = this.countriesService.cacheStore.byRegion.countries;
+    this.selectedRegion = this.countriesService.cacheStore.byRegion.region;
+  }
   searchByRegion(region:Region){
 
     this.selectedRegion = region;
